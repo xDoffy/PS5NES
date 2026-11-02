@@ -511,12 +511,12 @@
           <div class="nescart__settings-panel" id="nescart-panel-library" role="tabpanel" aria-labelledby="nescart-tab-library" hidden>
             <h3>Carpeta de juegos</h3>
             <div class="nescart__path-row">
-              <label class="nescart__field" for="nescart-rom-path">Ruta de ROMs<input id="nescart-rom-path" name="romPath" type="text" value="/data/roms/nes" spellcheck="false"></label>
+              <label class="nescart__field" for="nescart-rom-path">Ruta de ROMs<input id="nescart-rom-path" name="romPath" type="text" value="/app0/content/nes" spellcheck="false"></label>
               <label class="nescart__field">Almacenamiento
                 <select id="nescart-storage" name="storage"><option value="internal">Consola</option><option value="usb0">USB 0</option><option value="usb1">USB 1</option></select>
               </label>
             </div>
-            <p class="nescart__path-hint">Elige una ubicación o escribe la ruta completa de tu carpeta NES.</p>
+            <p class="nescart__path-hint">Ruta interna del título: /app0/content/nes. Por FTP corresponde a /data/homebrew/PPSA99169/content/nes.</p>
             <label class="nescart__scan-check"><input type="checkbox" name="scanOnStart" checked> Buscar juegos nuevos al iniciar</label>
           </div>
           <footer class="nescart__settings-footer">
@@ -627,7 +627,7 @@
           nextTab.focus();
         });
       });
-      const storagePaths = { internal: "/data/roms/nes", usb0: "/mnt/usb0/roms/nes", usb1: "/mnt/usb1/roms/nes" };
+      const storagePaths = { internal: "/app0/content/nes", usb0: "/mnt/usb0/roms/nes", usb1: "/mnt/usb1/roms/nes" };
       field("storage").addEventListener("change", () => {
         field("romPath").value = storagePaths[field("storage").value];
         settingsStatus.textContent = "Ruta seleccionada · guarda para aplicar";
