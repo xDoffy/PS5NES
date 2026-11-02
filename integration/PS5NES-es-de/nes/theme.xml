@@ -53,7 +53,7 @@
             <imageType>cover</imageType>
             <defaultImage>./assets/label-placeholder.svg</defaultImage>
             <imageFit>contain</imageFit>
-            <imageRelativeScale>0.55</imageRelativeScale>
+            <imageRelativeScale>0.5</imageRelativeScale>
             <imageInterpolation>linear</imageInterpolation>
             <backgroundImage>./assets/cartridge-body.svg</backgroundImage>
             <backgroundRelativeScale>1</backgroundRelativeScale>
@@ -77,7 +77,6 @@
             <origin>0.5 0.5</origin>
             <textColor>F5F6FAFF</textColor>
             <iconColor>F5F6FAFF</iconColor>
-            <zIndex>90</zIndex>
         </helpsystem>
     </view>
 </theme>
