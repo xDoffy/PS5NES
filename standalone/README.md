@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Convertir PS5NES en un título homebrew de PS5 instalable por separado. La app tendrá su propio proceso, interfaz y datos; no iniciará RetroArch ni EmulationStation y no requerirá un juego comercial como anfitrión.
+Convertir PS5NES en un título homebrew de PS5 instalable por separado como carpeta. La app tendrá su propio proceso, interfaz y datos; no iniciará RetroArch ni EmulationStation y no requerirá un juego comercial como anfitrión.
 
 ## Core NES
 
@@ -15,8 +15,12 @@ FCEUmm está bajo GPL-2.0. Un release que lo enlace debe preservar la licencia, 
 Estructura lógica prevista dentro de los datos de PS5NES:
 
 ```text
-PS5NES/
-├── eboot.bin
+<TITLE_ID>/
+├── eboot.bin            # generado al compilar
+├── sce_sys/
+│   ├── param.json       # identidad/título
+│   └── icon0.png        # icono del lanzador
+├── sce_module/          # runtime requerido por la cadena elegida
 ├── data/
 │   ├── roms/nes/       # ROMs .nes del usuario
 │   ├── covers/         # carátulas descargadas o aportadas
@@ -27,7 +31,7 @@ PS5NES/
 └── licenses/           # licencias y avisos de terceros
 ```
 
-En la interfaz se mostrará `data/roms/nes` como ruta predeterminada y se permitirá elegir otra carpeta accesible. El empaquetado debe mapear esta estructura a una ubicación persistente accesible por FTP en la consola; no se fija una ruta `/app0` o `/data/homebrew/<TITLE_ID>` hasta tener el título y probar los permisos reales.
+La carpeta completa se copiará a `/data/homebrew/<TITLE_ID>/`. Dentro del título, la ruta predeterminada será `/app0/data/roms/nes/`; por FTP corresponde a `/data/homebrew/<TITLE_ID>/data/roms/nes/`. La interfaz mostrará `data/roms/nes` y permitirá elegir otra ubicación accesible. `<TITLE_ID>` debe coincidir con `sce_sys/param.json` y ser único en la consola; no se reutilizará el identificador de RetroArch.
 
 ## Funciones previstas
 
@@ -40,9 +44,9 @@ La salida 4K es escalado de la imagen NES; no una mejora universal de texturas. 
 
 ## Estado técnico
 
-El contenido actual de `prototype/` sigue siendo una maqueta, y el antiguo tema ES-DE está archivado en `integration/`. Todavía no hay un frontend PS5 autónomo, un paquete `.pkg` ni un release instalable de esta arquitectura.
+El contenido actual de `prototype/` sigue siendo una maqueta, y el antiguo tema ES-DE está archivado en `integration/`. Todavía no hay un frontend PS5 autónomo, `eboot.bin` compilado ni una carpeta de título instalable de esta arquitectura.
 
-El entorno de trabajo no tiene el toolchain de PS5 ni una distribución WSL. Además, el [PS5SDK público](https://github.com/PS5Dev/PS5SDK) se describe como experimental y advierte que todavía no puede generar aplicaciones completas. Antes del release hace falta elegir y configurar una cadena compatible con títulos homebrew, crear el punto de entrada y el empaquetado, y probarlo en una PS5 con firmware 12.40.
+El entorno de trabajo no tiene el toolchain de PS5 ni una distribución WSL. Antes del release hace falta elegir y configurar una cadena compatible con títulos homebrew, generar `eboot.bin` y `sce_sys/param.json`, y probar la carpeta instalada en una PS5 con firmware 12.40. El [PS5SDK público](https://github.com/PS5Dev/PS5SDK) sigue siendo experimental, así que el build debe basarse en una cadena que ya produzca títulos carpeta funcionales.
 
 Como referencia de hardware se revisó [pNES5](https://github.com/ITSeniy/pNES5), que contiene emulación NES y entrada DualSense para PS5. Su método de ejecución documentado requiere LuaC0re y un juego anfitrión concreto, por eso no cumple el objetivo de título autónomo.
 
