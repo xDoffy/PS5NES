@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 480">
   <defs>
     <linearGradient id="plastic" x2="1" y2="1">
-      <stop stop-color="#b8bbc1"/>
+      <stop stop-color="#c1c4ca"/>
       <stop offset=".48" stop-color="#858992"/>
       <stop offset="1" stop-color="#666b74"/>
     </linearGradient>
@@ -10,16 +10,15 @@
       <stop offset="1" stop-color="#737780"/>
     </linearGradient>
   </defs>
-  <path d="M22 10h276v48h12v367h-18v39h-41v-18H69v18H28v-39H10V58h12z" fill="#262a31" opacity=".7"/>
+  <path d="M22 10h276v48h12v367h-18v39h-41v-18H69v18H28v-39H10V58h12z" fill="#10131a" opacity=".78"/>
   <path d="M25 8h270v50h13v365h-19v38h-39v-18H70v18H31v-38H11V58h14z" fill="url(#plastic)" stroke="#d2d4d8" stroke-width="5"/>
-  <path d="M36 25h68v354H36z" fill="#777c85" stroke="#595e67" stroke-width="3"/>
+  <path d="M32 77h39v310H32z" fill="#777c85" stroke="#595e67" stroke-width="3"/>
   <g fill="none" stroke="#c2c5cb" stroke-width="5" opacity=".76">
-    <path d="M42 42h55M42 62h55M42 82h55M42 102h55M42 122h55M42 142h55M42 162h55M42 182h55M42 202h55M42 222h55M42 242h55M42 262h55M42 282h55M42 302h55M42 322h55M42 342h55M42 362h55"/>
+    <path d="M37 92h29M37 111h29M37 130h29M37 149h29M37 168h29M37 187h29M37 206h29M37 225h29M37 244h29M37 263h29M37 282h29M37 301h29M37 320h29M37 339h29M37 358h29M37 377h29"/>
   </g>
-  <rect x="119" y="28" width="155" height="203" rx="7" fill="#20252d" stroke="#d8dbe0" stroke-width="6"/>
-  <rect x="129" y="38" width="135" height="183" rx="3" fill="#171b23" stroke="#080a0e" stroke-width="2"/>
-  <path d="M130 246h132" stroke="url(#edge)" stroke-width="5" opacity=".8"/>
-  <path d="M147 286l13 30 13-30z" fill="#767b84" stroke="#c3c6cb" stroke-width="3"/>
+  <rect x="76" y="130" width="168" height="220" rx="7" fill="#20252d" stroke="#d8dbe0" stroke-width="6"/>
+  <rect x="84" y="138" width="152" height="204" rx="3" fill="#171b23" stroke="#080a0e" stroke-width="2"/>
+  <path d="M119 365h82" stroke="url(#edge)" stroke-width="5" opacity=".8"/>
+  <path d="M147 394l13 30 13-30z" fill="#767b84" stroke="#c3c6cb" stroke-width="3"/>
   <path d="M132 454h135" stroke="#555a63" stroke-width="4" opacity=".7"/>
 </svg>
-
