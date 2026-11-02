@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+    <view name="system">
+        <image name="nesBackground">
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <path>./assets/nes-console-bg.jpg</path>
+            <opacity>0.42</opacity>
+            <zIndex>0</zIndex>
+        </image>
+        <text name="ps5nesBrand">
+            <pos>0.08 0.08</pos>
+            <size>0.84 0.06</size>
+            <text>PS5NES · EL DOFFY</text>
+            <color>F5F6FAFF</color>
+            <fontSize>0.035</fontSize>
+            <horizontalAlignment>center</horizontalAlignment>
+            <zIndex>70</zIndex>
+        </text>
+    </view>
+
+    <view name="gamelist">
+        <image name="nesBackground">
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <path>./assets/nes-console-bg.jpg</path>
+            <opacity>0.42</opacity>
+            <zIndex>0</zIndex>
+        </image>
+
+        <text name="ps5nesBrand">
+            <pos>0.08 0.075</pos>
+            <size>0.84 0.06</size>
+            <text>PS5NES · BIBLIOTECA NES</text>
+            <color>F5F6FAFF</color>
+            <fontSize>0.03</fontSize>
+            <horizontalAlignment>center</horizontalAlignment>
+            <zIndex>70</zIndex>
+        </text>
+
+        <carousel name="nesCartridgeCarousel">
+            <pos>0.5 0.52</pos>
+            <size>1 0.62</size>
+            <origin>0.5 0.5</origin>
+            <type>horizontalWheel</type>
+            <itemsBeforeCenter>2</itemsBeforeCenter>
+            <itemsAfterCenter>2</itemsAfterCenter>
+            <itemSize>0.215 0.35</itemSize>
+            <itemScale>1.16</itemScale>
+            <itemRotation>7.5</itemRotation>
+            <itemRotationOrigin>-3 0.5</itemRotationOrigin>
+            <itemVerticalAlignment>center</itemVerticalAlignment>
+            <imageType>cover</imageType>
+            <defaultImage>./assets/label-placeholder.svg</defaultImage>
+            <imageFit>contain</imageFit>
+            <imageRelativeScale>0.55</imageRelativeScale>
+            <imageInterpolation>linear</imageInterpolation>
+            <backgroundImage>./assets/cartridge-body.svg</backgroundImage>
+            <backgroundRelativeScale>1</backgroundRelativeScale>
+            <backgroundColor>FFFFFFFF</backgroundColor>
+            <unfocusedItemOpacity>0.74</unfocusedItemOpacity>
+            <zIndex>30</zIndex>
+        </carousel>
+
+        <text name="gameName">
+            <pos>0.5 0.83</pos>
+            <size>0.84 0.075</size>
+            <origin>0.5 0.5</origin>
+            <color>FFFFFFFF</color>
+            <fontSize>0.052</fontSize>
+            <horizontalAlignment>center</horizontalAlignment>
+            <zIndex>80</zIndex>
+        </text>
+
+        <helpsystem name="help">
+            <pos>0.5 0.94</pos>
+            <origin>0.5 0.5</origin>
+            <textColor>F5F6FAFF</textColor>
+            <iconColor>F5F6FAFF</iconColor>
+            <zIndex>90</zIndex>
+        </helpsystem>
+    </view>
+</theme>
+
