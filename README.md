@@ -10,7 +10,7 @@ Experiencia NES para PS5, diseñada por **El Doffy**.
 - [`integration/`](integration/README.md): tema instalable de EmulationStation para mostrar la biblioteca como cartuchos y jugar con el FCEUmm de PS5 RetroArch.
 - [`docs/propuesta-tecnica.md`](docs/propuesta-tecnica.md): alcance, arquitectura candidata, fases y puntos técnicos por resolver.
 
-La página HTML sigue siendo una maqueta de diseño con datos ficticios. El paquete de integración es el que conecta la biblioteca real y el lanzamiento de juegos, usando una instalación compatible de PS5 RetroArch.
+La página HTML sigue siendo una maqueta de diseño con datos ficticios. El tema de integración presenta la lista y sus carátulas como cartuchos; la biblioteca y el lanzamiento de los juegos los gestiona EmulationStation dentro de una instalación compatible de PS5 RetroArch.
 
 ## Dirección del proyecto
 
@@ -20,8 +20,8 @@ La integración parte del port abierto [PS5_RetroArch](https://github.com/mihawk
 
 1. Confirmar arranque y entrada DualSense en firmware 12.40.
 2. Abrir una ROM de prueba aportada por el usuario y comprobar audio, guardado y salida de vídeo.
-3. Integrar el core NES y la biblioteca local con carátulas y perfiles por juego.
-4. Conectar los controles de vídeo, remapeo y carpeta mostrados en el prototipo.
+3. Comprobar biblioteca, scraper de carátulas, controles y filtros en la PS5 objetivo.
+4. Evaluar una aplicación `.pkg` propia solo después de confirmar firmware, SDK y runtime compatibles.
 
 No se incluyen ROMs ni BIOS. La biblioteca debe usar copias y archivos que aporte legalmente el usuario.
 
