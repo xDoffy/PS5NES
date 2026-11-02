@@ -32,6 +32,14 @@ Como referencia técnica alternativa, [pNES5](https://github.com/ITSeniy/pNES5) 
 3. **Imagen:** presets de escalado y filtros; ajustar salida 4K y relación de aspecto en la consola real.
 4. **Pulido:** estados, historial, opciones por juego, arte personalizado, rendimiento, accesibilidad y empaquetado/documentación.
 
+## Integración del siguiente release
+
+El siguiente release entrega un tema `PS5NES-es-de` para el frontend EmulationStation incluido en [PS5_RetroArch](https://github.com/mihawk-99/PS5_RetroArch). Ese port ya integra FCEUmm, reconoce la biblioteca de RetroArch y lanza los juegos desde EmulationStation. El tema usa la portada descargada de cada juego dentro de una silueta original de cartucho NES y la foto de consola proporcionada por el autor como fondo semitransparente.
+
+PS5NES no redistribuye PS5 RetroArch ni el core. El usuario debe instalar el port compatible por separado y aportar sus copias de juegos. El camino de datos recomendado es la carpeta `content/nes` del título RetroArch (en FTP: `/data/homebrew/PPSA99169/content/nes`; dentro del título: `/app0/content/nes`). La ruta `/data/roms/nes` mostrada por la maqueta no se debe prometer como accesible dentro del sandbox del título.
+
+La integración no sustituye la validación en consola. La compatibilidad con firmware 12.40, la descarga de carátulas en ese firmware y el rendimiento de los filtros se deben confirmar en la PS5 objetivo antes de anunciar soporte.
+
 ## Riesgos técnicos a resolver temprano
 
 - La compatibilidad del homebrew depende del firmware, método de carga y bibliotecas/toolchain disponibles. El SDK público de PS5 se describe como experimental y sin soporte completo para aplicaciones; conviene usar la cadena de compilación probada por el port y comprobar el arranque específicamente en firmware 12.40.
