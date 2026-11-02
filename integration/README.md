@@ -5,11 +5,11 @@ PS5NES se integra como tema de **EmulationStation** en [PS5 RetroArch](https://g
 ## Instalar el tema
 
 1. Instala por separado una versión compatible de PS5 RetroArch que incluya EmulationStation y el core FCEUmm.
-2. Cierra el título en la PS5 y copia la carpeta `PS5NES-es-de` a `PPSA99169/es-de/themes/PS5NES-es-de/` en los archivos del título. Por FTP, la carpeta suele estar en `/data/homebrew/PPSA99169/`.
+2. Cierra el título en la PS5 y copia la carpeta `PS5NES-es-de` a `/data/homebrew/PPSA99169/es-de/ES-DE/themes/PS5NES-es-de/` por FTP. En el título esa ruta corresponde a `/app0/es-de/ES-DE/themes/PS5NES-es-de/`.
 3. Abre PS5 RetroArch, elige EmulationStation y selecciona **PS5NES** en **UI Settings → Theme Set**.
-4. Añade tus ROMs `.nes` a la biblioteca de EmulationStation. Al abrir la lista NES aparecerán en el carrusel y podrás lanzarlas con la configuración de sistema de PS5 RetroArch.
+4. Añade tus ROMs `.nes` a la biblioteca compartida desde la WebUI de PS5 RetroArch (**Games → + Add Game** o **Content**). En **Download Media** baja las carátulas disponibles. EmulationStation lee esa biblioteca y muestra los juegos en el carrusel para lanzarlos con la configuración NES de PS5 RetroArch.
 
-El tema usa la imagen **cover** de cada juego como etiqueta del cartucho y una imagen genérica cuando falta la portada. La descarga de carátulas se hace desde las funciones de biblioteca/descarga de medios del port y necesita conexión; este tema no descarga imágenes por sí solo.
+El tema usa la imagen **cover** de cada juego como etiqueta del cartucho y una imagen genérica cuando falta la portada. La descarga de carátulas se hace desde **WebUI → Download Media** y necesita conexión; este tema no descarga imágenes por sí solo.
 
 ## ROMs, mandos e imagen
 
